@@ -31,6 +31,11 @@ public class LogicScript : MonoBehaviour
 
     public void gameOver()
     {
+        int highScore = PlayerPrefs.GetInt("highScore");
+        if (playerScore > highScore) 
+        {
+            PlayerPrefs.SetInt("highScore", playerScore);
+        }
         isGameOver = true;
         gameOverScreen.SetActive(true);
     }
