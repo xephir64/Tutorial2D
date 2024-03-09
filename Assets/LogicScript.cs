@@ -34,4 +34,9 @@ public class LogicScript : MonoBehaviour
         isGameOver = true;
         gameOverScreen.SetActive(true);
     }
+
+    public void switchScenes(string scene)
+    {
+        SceneManager.LoadScene(scene);
+    }
 }
